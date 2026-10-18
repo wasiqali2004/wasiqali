@@ -872,6 +872,34 @@ noscript .ns{display:block;margin-top:var(--s3);padding:var(--s2) var(--s3);
 .shot figcaption{padding:.65rem var(--s3);border-top:1px solid var(--border);
   font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;
   text-transform:uppercase;color:var(--faint)}
+
+/* ── user journey ─────────────────────────────────── */
+.jr{border:1px solid var(--border);border-radius:var(--r);background:var(--surface);padding:var(--s3) 0 var(--s2);overflow:hidden}
+.jr-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s3);padding:0 var(--s3) var(--s3);flex-wrap:wrap}
+.jr-head h3{font-family:var(--display);font-size:clamp(1.15rem,2.6vw,1.5rem);margin:.15rem 0 .4rem}
+.jr-sub{color:var(--muted);font-size:.9rem;max-width:44rem;margin:0}
+.jr-ctl{display:flex;gap:.5rem}
+.jr-btn{appearance:none;width:2.4rem;height:2.4rem;border-radius:var(--r-pill);border:1px solid var(--border-strong);
+  background:var(--surface-2);color:var(--text);font-size:1.05rem;cursor:pointer;transition:border-color var(--d1),background var(--d1),transform var(--d1)}
+.jr-btn:hover,.jr-btn:focus-visible{border-color:var(--amber);background:var(--amber-soft);transform:translateY(-1px)}
+.jr-track{list-style:none;margin:0;padding:0 var(--s3) var(--s2);display:flex;align-items:flex-start;gap:0;
+  overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:var(--surface-3) transparent}
+.jr-track:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
+.jr-step{flex:0 0 auto;display:flex;align-items:center;scroll-snap-align:start}
+.jr-step figure{margin:0;width:clamp(240px,30vw,340px);border:1px solid var(--border);border-radius:var(--r-sm);
+  overflow:hidden;background:var(--surface-2);transition:transform var(--d2) var(--ease),border-color var(--d2),box-shadow var(--d2)}
+.jr-step figure:hover{transform:translateY(-4px);border-color:var(--amber);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.jr-step img{display:block;width:100%;height:auto}
+.jr-step figcaption{display:grid;grid-template-columns:auto 1fr;gap:.1rem .6rem;padding:.65rem .8rem;border-top:1px solid var(--border);align-items:baseline}
+.jr-n{font-family:var(--mono);font-size:.7rem;color:var(--amber);grid-row:span 2}
+.jr-k{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.jr-step figcaption b{font-weight:600;font-size:.82rem;line-height:1.3;color:var(--text);grid-column:2}
+.jr-arrow{flex:0 0 auto;display:grid;place-items:center;width:3.2rem;color:var(--amber)}
+.jr-arrow svg{animation:jrNudge 1.8s var(--ease) infinite}
+.jr-end{display:none}
+@keyframes jrNudge{0%,100%{transform:translateX(-3px);opacity:.55}50%{transform:translateX(4px);opacity:1}}
+.jr-foot{margin:0;padding:var(--s1) var(--s3) 0;font-family:var(--mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+@media(max-width:640px){.jr-head{padding-inline:var(--s2)}.jr-track{padding-inline:var(--s2)}.jr-arrow{width:2.4rem}.jr-ctl{display:none}}
 .tech{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:var(--s3)}
 .tech span{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted);padding:.32rem .65rem;
@@ -1067,7 +1095,7 @@ noscript .ns{display:block;margin-top:var(--s3);padding:var(--s2) var(--s3);
       <li>
         <button class="nw-item" type="button" aria-expanded="false">
           <span class="nw-top">
-            <span class="nw-v gradtext"><span class="cnt" data-to="445" data-dec="0">0</span></span>
+            <span class="nw-v gradtext"><span class="cnt" data-to="500" data-dec="0">0</span>+</span>
             <span class="nw-name">Sabr Luxury orders</span>
           </span>
           <span class="nw-d"><span>Across the Shopify storefront and in-person markets,
@@ -1624,7 +1652,7 @@ noscript .ns{display:block;margin-top:var(--s3);padding:var(--s2) var(--s3);
         <tr><td>Selling</td><td style="text-align:left;font-family:var(--sans)">Above the provincial average; 220% of home target in 2025; $3M+ premium written since 2023.</td></tr>
         <tr><td>Advocacy</td><td style="text-align:left;font-family:var(--sans)">94.7% client advocacy in 2024, 94% in 2026 to date.</td></tr>
         <tr><td>Digitizing ops</td><td style="text-align:left;font-family:var(--sans)">Genesys migration and checkout pilots; 833 chats at 10.6s to first reply; 20 min average case close.</td></tr>
-        <tr><td>Business launch</td><td style="text-align:left;font-family:var(--sans)">Sabr Luxury storefront live 24 Nov 2025; 445 orders; sold to 40+ countries.</td></tr>
+        <tr><td>Business launch</td><td style="text-align:left;font-family:var(--sans)">Sabr Luxury storefront live 24 Nov 2025; 500+ orders; sold to 40+ countries.</td></tr>
         <tr><td>E-commerce</td><td style="text-align:left;font-family:var(--sans)">Buyer, negotiator, photographer, ad buyer, email marketer and market-stall seller in one.</td></tr>
         <tr><td>Research</td><td style="text-align:left;font-family:var(--sans)">Mentored by Prof. Aurel Braun (Harvard Davis Center); published political essays; CCIT + Political Science.</td></tr>
         <tr><td>Meta Ads</td><td style="text-align:left;font-family:var(--sans)">Self-taught to a 1.40x return; CPM cut 63%, from CA$24.58 to CA$9.18, across 14 ad sets.</td></tr>
@@ -1924,6 +1952,93 @@ noscript .ns{display:block;margin-top:var(--s3);padding:var(--s2) var(--s3);
         colour-coded Push, Pull and Legs, and a list of recent personal records.">
     <figcaption>The body map rotates · trained groups light up</figcaption>
   </figure>
+
+  <div class="jr rv" id="journey" style="margin-top:var(--s4)">
+    <div class="jr-head">
+      <div>
+        <span class="lbl">User journey</span>
+        <h3>From first question to a working dashboard.</h3>
+        <p class="jr-sub">Ten screens of onboarding in Istiqamah, the product version of this dashboard. The answers decide which widgets a new user starts with, then they arrange the page themselves.</p>
+      </div>
+      <div class="jr-ctl">
+        <button type="button" class="jr-btn" data-dir="-1" aria-label="Previous steps">&larr;</button>
+        <button type="button" class="jr-btn" data-dir="1" aria-label="Next steps">&rarr;</button>
+      </div>
+    </div>
+    <ol class="jr-track" tabindex="0" role="region" aria-label="Onboarding steps, scroll sideways">
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-01.jpg" width="1000" height="689" loading="lazy" decoding="async" alt="Istiqamah splash screen: a ring with an upright stroke, the wordmark and its Arabic spelling.">
+          <figcaption><span class="jr-n">01</span><span class="jr-k">Open</span><b>The app opens on its wordmark.</b></figcaption>
+        </figure>
+        <span class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-02.jpg" width="1000" height="687" loading="lazy" decoding="async" alt="Onboarding question one: are you Muslim, with yes, no and rather not say.">
+          <figcaption><span class="jr-n">02</span><span class="jr-k">Question 1</span><b>Are you Muslim?</b></figcaption>
+        </figure>
+        <span class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-03.jpg" width="1000" height="687" loading="lazy" decoding="async" alt="Onboarding question two: what do you want out of Istiqamah, six goals to pick from and a free-text box.">
+          <figcaption><span class="jr-n">03</span><span class="jr-k">Question 2</span><b>What do you want out of it?</b></figcaption>
+        </figure>
+        <span class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-04.jpg" width="1000" height="687" loading="lazy" decoding="async" alt="Onboarding question three: which parts of your deen you want in front of you every day.">
+          <figcaption><span class="jr-n">04</span><span class="jr-k">Question 3</span><b>Which parts of your deen?</b></figcaption>
+        </figure>
+        <span class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-05.jpg" width="1000" height="687" loading="lazy" decoding="async" alt="Onboarding question four: how you look after your body.">
+          <figcaption><span class="jr-n">05</span><span class="jr-k">Question 4</span><b>How do you look after your body?</b></figcaption>
+        </figure>
+        <span class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-06.jpg" width="1000" height="687" loading="lazy" decoding="async" alt="Onboarding question five: whether you want spending, investments or store revenue on the dashboard, or none.">
+          <figcaption><span class="jr-n">06</span><span class="jr-k">Question 5</span><b>Do you want your money on here too?</b></figcaption>
+        </figure>
+        <span class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-07.jpg" width="1000" height="687" loading="lazy" decoding="async" alt="Onboarding question six: habits checklist, goals with progress bars and a daily reflection.">
+          <figcaption><span class="jr-n">07</span><span class="jr-k">Question 6</span><b>What else keeps you on track?</b></figcaption>
+        </figure>
+        <span class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-08.jpg" width="1000" height="878" loading="lazy" decoding="async" alt="The widget picker, pre-filled from the answers, with each widget tagged by plan.">
+          <figcaption><span class="jr-n">08</span><span class="jr-k">Pick</span><b>Choose what goes on your dashboard.</b></figcaption>
+        </figure>
+        <span class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-09.jpg" width="1000" height="878" loading="lazy" decoding="async" alt="The layout step: drag widgets into place and set each one to small, medium, large or full width.">
+          <figcaption><span class="jr-n">09</span><span class="jr-k">Arrange</span><b>Put everything where you want it.</b></figcaption>
+        </figure>
+        <span class="jr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+      <li class="jr-step">
+        <figure>
+          <img src="assets/journey-10.jpg" width="1000" height="579" loading="lazy" decoding="async" alt="The plan choice: Free, Pro and Founder, with a note that billing is not switched on yet.">
+          <figcaption><span class="jr-n">10</span><span class="jr-k">Plan</span><b>Choose your plan.</b></figcaption>
+        </figure>
+        <span class="jr-arrow jr-end" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </li>
+    </ol>
+    <p class="jr-foot">Ends at the dashboard shown above &middot; Istiqamah is in development &middot; billing is not switched on</p>
+  </div>
 </section>
 
 <section class="wrap">
@@ -2569,7 +2684,7 @@ if('IntersectionObserver' in window){
     {n:'Digitizing\nops', v:88, ic:'chat', src:'belairdirect digital operations · since 2025',
      ev:'A run of different projects aimed at digitizing how the work gets done: UAT and process work on the Genesys migration and the checkout pilots, 833 live chats through July 2026 at 10.6 seconds to first reply, and 20 minutes average to close a case end to end.'},
     {n:'Business\nlaunch', v:82, ic:'diamond', src:'Sabr Luxury · live 24 Nov 2025',
-     ev:'Took Sabr Luxury from nothing to a live storefront and a working business: 445 orders at a $47 average, shipped to 15 countries, and most revenue coming from in-person markets I stand at myself.'},
+     ev:'Took Sabr Luxury from nothing to a live storefront and a working business: 500+ orders at a $47 average, shipped to 15 countries, and most revenue coming from in-person markets I stand at myself.'},
     {n:'E-commerce', v:80, ic:'bag', src:'Sabr Luxury · Shopify',
      ev:'Every hat the business needs: buyer, supplier negotiator (one finish took four months to get right), photographer, pricer, inventory manager, ad buyer, email marketer, and market-stall seller.'},
     {n:'Research', v:74, ic:'book', src:'U of T Mississauga',
@@ -3111,6 +3226,15 @@ addEventListener('keydown',function(e){
 
 
 
+})();
+
+(function(){
+  var tr=document.querySelector('.jr-track'); if(!tr) return;
+  document.querySelectorAll('.jr-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      tr.scrollBy({left:(+b.dataset.dir)*Math.round(tr.clientWidth*.8),behavior:reduce?'auto':'smooth'});
+    });
+  });
 })();
 </script>
 </body>
