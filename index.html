@@ -3232,7 +3232,7 @@ addEventListener('keydown',function(e){
   var tr=document.querySelector('.jr-track'); if(!tr) return;
   document.querySelectorAll('.jr-btn').forEach(function(b){
     b.addEventListener('click',function(){
-      tr.scrollBy({left:(+b.dataset.dir)*Math.round(tr.clientWidth*.8),behavior:reduce?'auto':'smooth'});
+      tr.scrollBy({left:(+b.dataset.dir)*Math.round(tr.clientWidth*.8),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
     });
   });
 })();
